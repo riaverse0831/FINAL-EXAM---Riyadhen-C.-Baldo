@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Riyadhen Baldo | Portfolio</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+:root {
+    --blue: #2997FF;
+    --dark: #080D18;
+    --card: #111C2E;
+    --text: #D1DCEB;
+    --border: #233B5C;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--dark);
+    color: white;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #080D18;
+    border-bottom: 1px solid var(--border);
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--blue);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+/* GENERAL */
+
+section {
+    padding: 90px 10%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    color: var(--blue);
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 45px;
+}
+
+.small-title {
+    color: var(--blue);
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+/* HOME */
+
+#home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #080D18, #102D50);
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.home-text {
+    flex: 1;
+}
+
+.home-text h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.home-text h1 span {
+    color: var(--blue);
+}
+
+.home-text p {
+    color: var(--text);
+    font-size: 17px;
+}
+
+.home-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.home-photo img {
+    width: 320px;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid var(--blue);
+    box-shadow: 0 0 30px rgba(41,151,255,0.2);
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 27px;
+    background: var(--blue);
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: white;
+    color: var(--dark);
+    transform: translateY(-3px);
+}
+
+/* ABOUT */
+
+#about, #skills, #game {
+    background: #0D1523;
+}
+
+.about-card {
+    background: var(--card);
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.about-card h3 {
+    color: var(--blue);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    color: var(--text);
+    margin-bottom: 12px;
+}
+
+.about-description {
+    margin-top: 25px;
+    line-height: 1.9;
+}
+
+/* EDUCATION */
+
+.education-card {
+    background: var(--card);
+    border-left: 5px solid var(--blue);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateX(7px);
+}
+
+.education-card h3 {
+    color: var(--blue);
+    margin-bottom: 8px;
+}
+
+.education-card p {
+    color: var(--text);
+}
+
+/* SKILLS */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: var(--card);
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--blue);
+}
+
+.skill-card h3 {
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: var(--text);
+}
+
+/* PROJECT */
+
+.project-card {
+    background: var(--card);
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.project-label {
+    display: inline-block;
+    background: #102D50;
+    color: var(--blue);
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    color: var(--blue);
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.code-title {
+    margin: 25px 0 12px;
+    color: white;
+}
+
+.code-box {
+    background: #080D18;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.code-box pre {
+    color: #B9DCFF;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    white-space: pre;
+}
+
+details {
+    margin-top: 20px;
+}
+
+summary {
+    color: var(--blue);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 12px;
+    background: #080D18;
+    border-radius: 7px;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    background: white;
+    color: var(--dark);
+}
+
+/* GAME */
+
+.game-box {
+    max-width: 600px;
+    margin: auto;
+    padding: 35px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.game-box h3 {
+    color: var(--blue);
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.game-box p {
+    color: var(--text);
+}
+
+.game-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.info {
+    background: var(--dark);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.info h4 {
+    color: var(--blue);
+    font-size: 25px;
+}
+
+#wordDisplay {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 7px;
+    color: var(--blue);
+    margin: 25px 0;
+    overflow-wrap: anywhere;
+}
+
+#hint {
+    margin-bottom: 20px;
+}
+
+.game-box input {
+    width: 100%;
+    padding: 14px;
+    background: var(--dark);
+    color: white;
+    border: 1px solid var(--blue);
+    border-radius: 7px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.game-buttons button {
+    padding: 12px 22px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.game-buttons button:hover {
+    background: white;
+    color: var(--dark);
+}
+
+.game-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#message {
+    margin-top: 20px;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+#usedLetters {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-card h3 {
+    color: var(--blue);
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+    padding: 25px;
+    text-align: center;
+    color: #A3B3C5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+
+    .home-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-text h1 {
+        font-size: 38px;
+    }
+
+    .home-photo img {
+        width: 230px;
+        height: 280px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .game-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card,
+    .project-card,
+    .game-box {
+        padding: 22px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">RIYADHEN BALDO</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#game">My Game</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+<!-- HOME -->
+
+<section id="home">
+
+    <div class="container home-content">
+
+        <div class="home-text">
+
+            <div class="small-title">
+                WELCOME TO MY PORTFOLIO
+            </div>
+
+            <h1>
+                Hello, I'm <span>Riyadhen!</span>
+            </h1>
+
+            <p>
+                An Information Technology student who loves
+                learning, exploring creativity, and discovering
+                new things. Welcome to my personal portfolio
+                where you can learn more about me, my education,
+                skills, and projects.
+            </p>
+
+            <a href="#about" class="button">ABOUT ME</a>
+
+        </div>
+
+        <div class="home-photo">
+
+            <img src="received_1294861997035111.jpeg"
+            alt="Riyadhen's Profile Photo">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">ABOUT ME</h2>
+
+        <div class="about-card">
+
+            <h3>Personal Information</h3>
+
+            <p><b>Name:</b> Riyadhen C. Baldo</p>
+
+            <p><b>Course:</b> Bachelor of Science in Information Technology</p>
+
+            <p><b>Year Level:</b> First Year</p>
+
+            <p><b>School:</b> Our Lady of the Sacred Heart College</p>
+
+            <div class="about-description">
+
+                <p>
+                    I am a funny, friendly, and caring person
+                    who enjoys learning new things and improving
+                    myself. I love reading novels, editing,
+                    and watching movies.
+                </p>
+
+                <p>
+                    When I was younger, my dream was to become
+                    an architect. Now, my goal is to become
+                    successful in the path I have chosen.
+                    I believe that every experience is an
+                    opportunity to learn and grow.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            EDUCATIONAL BACKGROUND
+        </h2>
+
+        <div class="education-card">
+
+            <h3>College</h3>
+
+            <p>Our Lady of the Sacred Heart College</p>
+
+            <p>Bachelor of Science in Information Technology</p>
+
+            <p>First Year College</p>
+
+        </div>
+
+        <div class="education-card">
+
+            <h3>Senior High School</h3>
+
+            <p>Bonifacio Luz Natividad Educational Foundation, Inc.</p>
+
+            <p>Completed Senior High School</p>
+
+        </div>
+
+        <div class="education-card">
+
+            <h3>Junior High School</h3>
+
+            <p>Bartolome Sangalang National High School</p>
+
+        </div>
+
+        <div class="education-card">
+
+            <h3>Elementary</h3>
+
+            <p>Guimba West Central School</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <h2 class="section-title">MY SKILLS</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Time Management</h3>
+                <p>Ability to organize tasks and finish them on time.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Basic Graphic Design</h3>
+                <p>Ability to create simple and creative visual designs.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Creative Writing</h3>
+                <p>Ability to express ideas and thoughts through written content.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Photo and Video Editing</h3>
+                <p>Ability to edit photos and videos to make them more appealing.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Teamwork and Collaboration</h3>
+                <p>Ability to work well and cooperate with others.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Communication Skills</h3>
+                <p>Ability to share ideas and communicate clearly.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Problem-Solving</h3>
+                <p>Ability to find solutions to different challenges.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Adaptability</h3>
+                <p>Ability to adjust to new situations and changes.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Basic Computer Literacy</h3>
+                <p>Knowledge of using computers and basic applications.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Basic HTML and CSS</h3>
+                <p>Knowledge of creating and designing simple websites.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Basic Java Programming</h3>
+                <p>Understanding of basic Java coding and programming concepts.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Willingness to Learn</h3>
+                <p>Openness to learning new skills and gaining knowledge.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- JAVA PROJECT -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            MY JAVA PROJECT
+        </h2>
+
+        <div class="project-card">
+
+            <span class="project-label">
+                CC102 | JAVA PROGRAMMING
+            </span>
+
+            <h3>Word Guessing Game</h3>
+
+            <p>
+                This is my Java Programming project for CC102.
+                The Word Guessing Game allows players to guess
+                a hidden word one letter at a time using the
+                given hints. The player has six attempts to
+                guess the correct word. Every correct answer
+                earns 10 points.
+            </p>
+
+            <p>
+                This project uses Java concepts such as arrays,
+                loops, conditional statements, Scanner, Random,
+                and String methods.
+            </p>
+
+            <h4 class="code-title">Java Source Code</h4>
+
+            <details>
+
+                <summary>View Java Source Code</summary>
+
+                <div class="code-box">
+
+<pre>
+// Paste your actual WordGuessingGame.java
+// source code here.
+</pre>
+
+                </div>
+
+            </details>
+
+        </div>
+
+        <a href="https://onecompiler.com/java"
+           target="_blank"
+           class="project-link">
+           OPEN JAVA COMPILER
+        </a>
+
+    </div>
+
+</section>
+
+<!-- PLAYABLE WORD GUESSING GAME -->
+
+<section id="game">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            PLAY MY GAME
+        </h2>
+
+        <div class="game-box">
+
+            <h3>WORD GUESSING GAME</h3>
+
+            <p>
+                Guess the hidden word one letter at a time.
+                Use the hint to help you find the correct answer!
+            </p>
+
+            <div class="game-info">
+
+                <div class="info">
+                    <p>Score</p>
+                    <h4 id="score">0</h4>
+                </div>
+
+                <div class="info">
+                    <p>Attempts</p>
+                    <h4 id="attempts">6</h4>
+                </div>
+
+                <div class="info">
+                    <p>Round</p>
+                    <h4 id="round">1</h4>
+                </div>
+
+            </div>
+
+            <p id="wordDisplay">_ _ _ _</p>
+
+            <p id="hint"></p>
+
+            <br>
+
+            <input
+                type="text"
+                id="letterInput"
+                maxlength="1"
+                placeholder="Enter one letter"
+                autocomplete="off"
+            >
+
+            <div class="game-buttons">
+
+                <button id="guessButton" onclick="guessLetter()">
+                    GUESS
+                </button>
+
+                <button onclick="restartGame()">
+                    NEW GAME
+                </button>
+
+            </div>
+
+            <p id="message">
+                Good luck! Start guessing!
+            </p>
+
+            <p id="usedLetters">
+                Used Letters: None
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">CONTACT ME</h2>
+
+        <div class="contact-card">
+
+            <h3>Get in Touch</h3>
+
+            <p>Email: riabaldo93@gmail.com</p>
+
+            <p>Facebook: Riyadhen Camus Baldo</p>
+
+            <br>
+
+            <p>
+                Thank you for visiting my personal portfolio!
+                Feel free to connect with me.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 Riyadhen C. Baldo</p>
+
+    <p>Personal Portfolio | Designed with Creativity</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const words = [
+    {
+        word: "JAVA",
+        hint: "A programming language."
+    },
+    {
+        word: "HTML",
+        hint: "Used to create the structure of websites."
+    },
+    {
+        word: "COMPUTER",
+        hint: "An electronic device used for processing data."
+    },
+    {
+        word: "KEYBOARD",
+        hint: "An input device used for typing."
+    },
+    {
+        word: "INTERNET",
+        hint: "A global network connecting computers."
+    },
+    {
+        word: "SOFTWARE",
+        hint: "Programs and applications used by computers."
+    },
+    {
+        word: "MOUSE",
+        hint: "A pointing device used with a computer."
+    },
+    {
+        word: "PYTHON",
+        hint: "Another popular programming language."
+    },
+    {
+        word: "CODING",
+        hint: "The process of writing computer instructions."
+    },
+    {
+        word: "WEBSITE",
+        hint: "A collection of web pages."
+    }
+];
+
+let selectedWord;
+let selectedHint;
+let guessedLetters = [];
+let attempts = 6;
+let score = 0;
+let round = 1;
+let gameOver = false;
+let wordIndex = 0;
+let nextRoundTimer;
+
+function startRound() {
+
+    selectedWord = words[wordIndex].word;
+    selectedHint = words[wordIndex].hint;
+
+    guessedLetters = [];
+    attempts = 6;
+    gameOver = false;
+
+    document.getElementById("attempts").textContent = attempts;
+    document.getElementById("round").textContent = round;
+    document.getElementById("hint").textContent = "Hint: " + selectedHint;
+
+    document.getElementById("message").textContent =
+        "Good luck! Start guessing!";
+
+    document.getElementById("letterInput").disabled = false;
+    document.getElementById("guessButton").disabled = false;
+    document.getElementById("letterInput").value = "";
+
+    updateDisplay();
+
+}
+
+function updateDisplay() {
+
+    let display = "";
+
+    for (let letter of selectedWord) {
+
+        if (guessedLetters.includes(letter)) {
+            display += letter + " ";
+        } else {
+            display += "_ ";
+        }
+
+    }
+
+    document.getElementById("wordDisplay").textContent = display;
+
+    document.getElementById("score").textContent = score;
+
+    document.getElementById("attempts").textContent = attempts;
+
+    document.getElementById("usedLetters").textContent =
+        "Used Letters: " +
+        (guessedLetters.length ? guessedLetters.join(", ") : "None");
+
+}
+
+function guessLetter() {
+
+    if (gameO
